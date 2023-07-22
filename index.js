@@ -1,5 +1,5 @@
 let boxes = document.getElementsByClassName("boxes");
-let ting = new Audio("ting.mp3");
+let ting = new Audio("./ting.mp3");
 let body = document.querySelector("body");
 let startBtn = document.querySelector(".play-btn");
 let introBox = document.querySelector(".intro");
