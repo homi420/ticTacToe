@@ -1,0 +1,161 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: sans-serif;
+    background-color: green;
+    color: whitesmoke;
+    position: relative;
+}
+
+h1 {
+    margin: 5rem;
+    font-family: cursive;
+}
+
+.game-table {
+    display: none;
+    z-index: 100;
+    grid-template-columns: repeat(3, 15vmax);
+    transition: 0.4s ease-in-out;
+    opacity: 0;
+}
+
+.fading_game_table {
+    animation-name: Fade;
+    animation-iteration-count: 1;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+.boxes {
+    width: 15vmax;
+    height: 15vmax;
+    border: .2vmax solid grey;
+    font-size: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .1s ease-in-out;
+}
+
+.boxes:hover {
+    cursor: pointer;
+    transition: all .1s ease-in-out;
+    background-color: rgb(162, 255, 144);
+}
+
+.boxes:active {
+    background-color: rgb(124, 228, 104);
+}
+
+.circle {
+    font-size: 200px;
+    position: absolute;
+    opacity: 0.02;
+    animation-name: animator;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+}
+
+.intro {
+    color: black;
+    font-weight: 800;
+    border-radius: 1rem;
+    position: absolute;
+    z-index: 100;
+    width: 70%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    background-color: skyblue;
+}
+
+.play-btn {
+    margin: 1rem;
+    padding: 1rem;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    background-color: Green;
+    color: white;
+    border: none;
+    border-radius: 1rem;
+}
+
+.play-btn:hover {
+    background-color: rgba(0, 128, 0, 0.623);
+}
+
+.animated {
+    animation-name: negativeFade;
+    animation-iteration-count: 1;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.intro p {
+    margin: 1rem;
+    max-width: 90vw;
+    font-size: larger;
+    text-align: center;
+}
+
+.intro h1 {
+    margin: 1rem !important;
+}
+
+.cross {
+    font-size: 200px;
+    opacity: 0.02;
+    position: absolute;
+    animation-name: animator;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+}
+
+@keyframes Fade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes negativeFade {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes animator {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.02;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
