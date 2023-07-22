@@ -6,3 +6,7 @@ Welcome to the Tic Tac Toe Game repository! This is a web-based implementation o
 
 Live Demo
 Check out the live demo of the Tic Tac Toe game hosted on GitHub Pages: https://homi420.github.io/ticTacToe/
+
+
+License
+This project is licensed under the MIT License.
